@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="abApp">
+<head>
+    <title>AB</title>
+    <link rel="stylesheet" type="text/css" href="color.css">
+    <script src="angular.js"></script>
+    <script src="bootstrap.js"></script>
+    <script src="importCtrl.js"></script>
+    <script src="import.service.js"></script>
+    <script src="sumCtrl.js"></script>
+    <!-- <script src="divCtrl.js"></script>
+    <script src="divCtrl.service.js"></script>
+    <script src="aCtrl.js"></script>
+    <script src="aCtrl.service.js"></script>
+    <script src="bCtrl.js"></script>
+    <script src="bCtrl.service.js"></script> -->
+</head>
+<body >
+    <div ng-controller="importCtrl">
+        <p>a : <input type="number" ng-model="ab.a"></p>
+        <p>b : <input type="number" ng-model="ab.b"></p>
+        <input type="radio" name="gy" value="{pos : 'green', neg: 'yellow'}" ng-model="ab.color">green N' yellow
+        <input type="radio" name="bb" value="{pos : 'blue', neg : 'brown'}" ng-model="ab.color">blue N' brown
+        </div>
+    <div ng-controller="sumCtrl" ng-class="sum.a + sum.b > 0 ? sum.color[pos] : sum.color[neg]">
+        <p>a + b = {{sum.a + sum.b}}</p>
+    </div>
+    <!-- <div ng-controller="divCtrl">
+    </div>
+    <div ng-controller="aCtrl">
+    </div>
+    <div ng-controller="bCtrl">
+    </div> -->
+</body>
+</html>
