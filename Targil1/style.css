@@ -1,0 +1,16 @@
+.ok {
+    color : green
+}
+
+.missing {
+    color : red;
+    border-color : red
+}
+
+.part {
+    color: orange;
+}
+
+.under {
+    color: blue;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="styleApp">
+<head>
+    <title>Colors</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="angular.js"></script>
+
+    <script src="bootstrap.js"></script>
+
+    <script src="parentCtrl.js"></script>
+</head>
+<body >
+
+    <div ng-controller="parentCtrl">
+
+        <p class="missing">MISSING</p>
+        <p class="ok">MISSING</p>
+        <hr>
+        <p ng-class = "{missing : name == '', ok : name != ''}">NAME : <input type="text" ng-model="name" ng-class="name == '' ? 'missing' : 'ok'"></p>
+        <p ng-class = "getClass()">Email : <input type="text" ng-model="email" ng-class="id == '' ? 'missing' : 'ok'"></p>
+        <p>Age : <input type="number" ng-model="age" ng-class="ph == '' ? 'missing' : 'ok'"></p>
+        <p ng-class="colorMe()">Verification</p>
+    </div>
+    <br>
+</body>
+</html>
